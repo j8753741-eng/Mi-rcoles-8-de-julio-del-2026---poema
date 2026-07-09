@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Miércoles 8 de Julio del 2026 • Poema</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+radial-gradient(circle at top,#47306d 0%,#24162f 28%,#120d19 60%,#09070d 100%);
+
+font-family:'Cormorant Garamond',serif;
+color:#f8f3ff;
+overflow-x:hidden;
+min-height:100vh;
+position:relative;
+
+}
+
+/* Fondo brillante */
+
+body::before{
+
+content:"";
+position:fixed;
+inset:0;
+
+background:
+
+radial-gradient(circle at 18% 12%,rgba(255,255,255,.18),transparent 18%),
+
+radial-gradient(circle at 82% 18%,rgba(255,225,170,.12),transparent 22%),
+
+radial-gradient(circle at 50% 85%,rgba(214,174,255,.10),transparent 30%);
+
+pointer-events:none;
+
+animation:aurora 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes aurora{
+
+0%{transform:scale(1);}
+100%{transform:scale(1.18);}
+
+}
+
+/* Estrellas */
+
+.stars{
+
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+
+}
+
+.star{
+
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+box-shadow:0 0 12px #fff;
+animation:twinkle 4s infinite ease-in-out;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:.2;
+transform:scale(.7);
+}
+
+50%{
+opacity:1;
+transform:scale(1.7);
+}
+
+}
+
+/* Destellos */
+
+.spark{
+
+position:absolute;
+font-size:18px;
+color:#fff6d8;
+opacity:.35;
+animation:float 10s linear infinite;
+}
+
+@keyframes float{
+
+from{
+transform:translateY(40px);
+opacity:0;
+}
+
+30%{
+opacity:.4;
+}
+
+to{
+transform:translateY(-100vh);
+opacity:0;
+}
+
+}
+
+.container{
+
+width:92%;
+max-width:900px;
+margin:70px auto;
+
+background:rgba(255,255,255,.07);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:34px;
+
+box-shadow:
+
+0 0 45px rgba(212,170,255,.18),
+
+0 0 120px rgba(0,0,0,.45);
+
+padding:70px 55px;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.container::before{
+
+content:"";
+
+position:absolute;
+
+left:-120px;
+top:-120px;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,rgba(255,226,187,.28),transparent 70%);
+
+}
+
+.container::after{
+
+content:"";
+
+position:absolute;
+
+right:-120px;
+bottom:-120px;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,rgba(214,170,255,.22),transparent 70%);
+
+}
+
+header{
+
+text-align:center;
+margin-bottom:60px;
+position:relative;
+z-index:2;
+
+}
+
+.small{
+
+font-family:'Montserrat',sans-serif;
+
+letter-spacing:4px;
+
+font-size:.82rem;
+
+color:#efe2ff;
+
+text-transform:uppercase;
+
+}
+
+h1{
+
+margin-top:18px;
+margin-bottom:22px;
+
+font-size:3.15rem;
+
+font-weight:600;
+
+line-height:1.18;
+
+color:#fffdfd;
+
+text-shadow:
+
+0 0 18px rgba(255,255,255,.28),
+
+0 0 35px rgba(225,184,255,.25);
+
+}
+
+.line{
+
+width:190px;
+height:2px;
+
+margin:0 auto;
+
+background:linear-gradient(90deg,
+transparent,
+#ffe5ae,
+#ffffff,
+#dcaeff,
+transparent);
+
+}
+
+.date{
+
+margin-top:22px;
+
+font-family:'Montserrat',sans-serif;
+
+font-size:.88rem;
+
+letter-spacing:2px;
+
+color:#efe6ff;
+
+}
+
+.ornament{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+
+margin:45px 0;
+
+color:#ffe4ab;
+
+font-size:1.2rem;
+
+}
+
+.ornament span:nth-child(2){
+
+font-size:1.8rem;
+
+color:#ffffff;
+
+}
+
+.poem{
+
+position:relative;
+z-index:2;
+
+}
+
+.poem p{
+
+font-size:2rem;
+
+line-height:1.95;
+
+margin:22px 0;
+
+text-align:center;
+
+color:#fffafc;
+
+text-shadow:0 0 12px rgba(255,255,255,.08);
+
+}
+
+.poem p strong{
+
+font-weight:600;
+
+color:#ffe5b4;
+
+}
+
+.whisper{
+
+font-size:2.2rem;
+
+color:#ffe9cb;
+
+font-style:italic;
+
+margin:45px 0;
+
+}
+
+.section{
+
+margin-top:60px;
+
+position:relative;
+
+}
+
+.section::before{
+
+content:"✦";
+
+position:absolute;
+
+left:50%;
+transform:translateX(-50%);
+
+top:-38px;
+
+font-size:22px;
+
+color:#ffe5ae;
+
+}
+
+@media(max-width:700px){
+
+.container{
+
+padding:45px 28px;
+
+}
+
+h1{
+
+font-size:2.2rem;
+
+}
+
+.poem p{
+
+font-size:1.58rem;
+line-height:1.85;
+
+}
+
+.whisper{
+
+font-size:1.8rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars">
+
+<div class="star" style="left:6%;top:9%;animation-delay:0s;"></div>
+<div class="star" style="left:16%;top:25%;animation-delay:1s;"></div>
+<div class="star" style="left:28%;top:13%;animation-delay:2s;"></div>
+<div class="star" style="left:41%;top:31%;animation-delay:3s;"></div>
+<div class="star" style="left:56%;top:18%;animation-delay:1.4s;"></div>
+<div class="star" style="left:69%;top:10%;animation-delay:2.8s;"></div>
+<div class="star" style="left:83%;top:26%;animation-delay:1.8s;"></div>
+<div class="star" style="left:92%;top:15%;animation-delay:3.6s;"></div>
+
+<div class="spark" style="left:12%;bottom:-50px;">✦</div>
+<div class="spark" style="left:72%;bottom:-100px;animation-delay:4s;">✧</div>
+<div class="spark" style="left:47%;bottom:-70px;animation-delay:2s;">✨</div>
+
+</div>
+
+<div class="container">
+
+<header>
+
+<div class="small">
+UN POEMA ESCRITO SOLAMENTE PARA TI
+</div>
+
+<h1>
+CUANDO LA NOCHE PRONUNCIA TU NOMBRE,<br>
+HASTA LAS ESTRELLAS APRENDEN A AMAR
+</h1>
+
+<div class="line"></div>
+
+<div class="date">
+MIÉRCOLES 8 DE JULIO DEL 2026 • NOCHE
+</div>
+
+</header>
+
+<div class="ornament">
+<span>❈</span>
+<span>❤</span>
+<span>❈</span>
+</div>
+
+<div class="poem">
+
+<p>
+Hay noches que nacen para ser olvidadas.
+</p>
+
+<p>
+Y existen otras que llegan al mundo con la única misión de guardar para siempre aquello que un corazón fue capaz de sentir.
+</p>
+
+<p>
+<strong>Esta noche pertenece a esas.</strong>
+</p>
+
+<p>
+Porque mientras el universo continúa su camino, yo me quedo detenido en el lugar más hermoso que conozco: el recuerdo de tus ojos, el sonido de tu risa y la certeza de que eres el amor más grande que ha pasado por mi vida.
+</p>
+
+<div class="section">
+
+<p>
+Si alguna vez alguien me preguntara dónde vive la felicidad, no señalaría un país, ni una ciudad, ni un paisaje.
+</p>
+
+<p>
+<strong>Simplemente diría tu nombre.</strong>
+</p>
+
+<p>
+Porque desde que apareciste, descubrí que el hogar no siempre tiene paredes.
+</p>
+
+<p>
+A veces tiene abrazos.
+</p>
+
+<p>
+Tiene una sonrisa que calma cualquier tormenta.
+</p>
+
+<p>
+Tiene una mirada capaz de hacer florecer hasta los inviernos más fríos del alma.
+</p>
+
+<p class="whisper">
+Y ese hogar eres tú...
+</p>
+
+<div class="section">
+
+<p>
+Esta noche quisiera tener palabras suficientes para explicar todo lo que provocas dentro de mí.
+</p>
+
+<p>
+Pero el amor verdadero siempre termina siendo más grande que cualquier idioma.
+</p>
+
+<p>
+¿Cómo podría describir lo que siento cuando imagino tus manos entre las mías?
+</p>
+
+<p>
+¿Cómo explicar que cada latido parece pronunciar tu nombre sin que yo se lo pida?
+</p>
+
+<p>
+¿Cómo decirte que incluso cuando no estás cerca, mi corazón sigue buscándote como si hubiera nacido únicamente para encontrarte?
+</p>
+
+<p>
+No existe diccionario capaz de traducir este sentimiento.
+</p>
+
+<p>
+<strong>Porque tú no eres una página de mi historia.</strong>
+</p>
+
+<p>
+Tú eres el libro entero.
+</p>
+
+<p>
+Eres el capítulo que jamás quiero terminar.
+</p>
+
+<p>
+Eres el verso favorito que mi alma relee una y otra vez sin cansarse.
+</p>
+
+<div class="ornament">
+<span>✧</span>
+<span>❀</span>
+<span>✧</span>
+</div>
+
+<div class="section">
+
+<p>
+A veces pienso que el cielo inventó las estrellas únicamente para practicar antes de crear el brillo de tus ojos.
+</p>
+
+<p>
+Que el viento aprendió a ser suave después de imaginar cómo acaricias tu cabello.
+</p>
+
+<p>
+Que las flores decidieron perfumar la tierra porque algún día existirías tú.
+</p>
+
+<p>
+Y entonces entiendo que el universo jamás estuvo vacío.
+</p>
+
+<p>
+<strong>Simplemente estaba preparándose para regalarme el milagro de conocerte.</strong>
+</p>
+
+<p class="whisper">
+Mi niña hermosa...
+</p>
+
+</div>
+
+<div class="section">
+
+<p>
+Si pudiera detener el tiempo, elegiría una de esas tardes donde tu sonrisa apareció sin avisar.
+</p>
+
+<p>
+La guardaría para siempre.
+</p>
+
+<p>
+La repetiría millones de veces.
+</p>
+
+<p>
+Porque en un solo instante contigo encuentro más felicidad que en una vida entera sin ti.
+</p>
+
+<p>
+Quisiera que supieras algo.
+</p>
+
+<p>
+<strong>Nunca voy a cansarme de admirarte.</strong>
+</p>
+
+<p>
+Nunca dejaré de enamorarme de la persona increíble que eres.
+</p>
+
+<p>
+Porque mientras otros amores se acostumbran, el mío descubre cada día una razón nueva para crecer.
+</p>
+
+<p>
+Hoy te amo más que ayer.
+</p>
+
+<p>
+Y mañana encontraré otra forma de hacerlo todavía más.
+</p>
+
+<p>
+Eso es lo maravilloso de ti.
+</p>
+
+<p>
+Jamás permites que mi corazón llegue al límite.
+</p>
+
+<p>
+Siempre consigues hacerlo amar un poco más.
+</p>
+
+</div>
+
+<div class="ornament">
+<span>❈</span>
+<span>❤</span>
+<span>❈</span>
+</div>
+
+<div class="section">
+
+<p>
+Si esta noche pudiera regalarte algo, no sería una joya.
+</p>
+
+<p>
+No sería una flor.
+</p>
+
+<p>
+Ni siquiera una estrella.
+</p>
+
+<p>
+Te regalaría todos los amaneceres que todavía no existen.
+</p>
+
+<p>
+Para que cada nuevo día te recuerde cuánto deseo verte feliz.
+</p>
+
+<p>
+Te regalaría todas las canciones que aún no han sido escritas.
+</p>
+
+<p>
+Para que algún día alguien pueda cantarle al mundo una mínima parte de lo que significas para mí.
+</p>
+
+<p>
+Te regalaría mis silencios.
+</p>
+
+<p>
+Porque incluso cuando no hablo, todo dentro de mí continúa diciéndote cuánto te ama.
+</p>
+
+<p>
+Y si algún día el destino decidiera preguntarme cuál fue el mayor privilegio de mi existencia...
+</p>
+
+<p>
+No respondería que fue cumplir un sueño.
+</p>
+
+<p>
+<strong>Respondería que fue coincidir contigo.</strong>
+</p>
+
+<p>
+Porque conocerte cambió la forma en que entiendo la vida.
+</p>
+
+<p>
+Desde entonces ya no camino solo.
+</p>
+
+<p>
+Camino acompañado por la esperanza de construir recuerdos contigo.
+</p>
+
+<p>
+Por el deseo inmenso de seguir escribiendo historias donde el amor nunca se canse de existir.
+</p>
+
+<p>
+Quiero seguir siendo la persona que celebre cada una de tus victorias.
+</p>
+
+<p>
+Quiero abrazarte cuando el mundo parezca demasiado pesado.
+</p>
+
+<p>
+Quiero reír contigo hasta que nos duela el alma de tanta felicidad.
+</p>
+
+<p>
+Quiero mirar el paso de los años sin miedo, porque mientras sea a tu lado, incluso el tiempo parecerá un regalo.
+</p>
+
+<div class="ornament">
+<span>✦</span>
+<span>❤</span>
+<span>✦</span>
+</div>
+
+<div class="section">
+
+<p>
+Esta noche levanto la mirada hacia el cielo.
+</p>
+
+<p>
+Y aunque las estrellas brillan con toda su fuerza, ninguna consigue parecerse a la luz que encendiste dentro de mí.
+</p>
+
+<p>
+Porque desde que llegaste, ya no tengo miedo de amar.
+</p>
+
+<p>
+Ya no tengo miedo de entregar el corazón.
+</p>
+
+<p>
+<strong>
+Tú me enseñaste que el amor verdadero no se mide por los días, sino por la intensidad con la que dos almas deciden elegirse una y otra vez.
+</strong>
+</p>
+
+<p class="whisper">
+Y yo...
+</p>
+
+<p>
+Te elegiría en cualquier vida.
+</p>
+
+<p>
+En cualquier universo.
+</p>
+
+<p>
+En cualquier época.
+</p>
+
+<p>
+Aunque tuviera que empezar desde cero mil veces.
+</p>
+
+<p>
+Aunque tuviera que buscarte entre millones de personas.
+</p>
+
+<p>
+Volvería a encontrarte.
+</p>
+
+<p>
+Volvería a enamorarme.
+</p>
+
+<p>
+Volvería a decirte que eres el milagro más hermoso que la vida escribió para mí.
+</p>
+
+</div>
+
+<div class="ornament">
+<span>❀</span>
+<span>✨</span>
+<span>❀</span>
+</div>
+
+<div class="section">
+
+<p>
+Porque existen personas que pasan por nuestra historia.
+</p>
+
+<p>
+Y existen personas que se convierten en nuestra historia.
+</p>
+
+<p>
+<strong>Tú eres ambas cosas.</strong>
+</p>
+
+<p>
+Mi comienzo favorito.
+</p>
+
+<p>
+Mi presente más hermoso.
+</p>
+
+<p>
+Y el futuro con el que sueño cada vez que cierro los ojos.
+</p>
+
+<p>
+Así termina esta noche.
+</p>
+
+<p>
+No con un adiós.
+</p>
+
+<p>
+Sino con una promesa silenciosa.
+</p>
+
+<p>
+Mientras mi corazón siga latiendo, siempre habrá un lugar donde tu nombre será pronunciado con la ternura más infinita.
+</p>
+
+<p>
+Siempre habrá una noche en la que escribiré para recordarte que eres el amor más inmenso que he conocido.
+</p>
+
+<p class="whisper">
+Y siempre existiré yo...
+</p>
+
+<p>
+Amándote con una intensidad que ni el tiempo, ni la distancia, ni el destino serán capaces de apagar.
+</p>
+
+<p>
+Porque si algún día todas las estrellas dejaran de brillar...
+</p>
+
+<p>
+<strong>
+Mi corazón seguiría iluminando tu camino.
+</strong>
+</p>
+
+<p class="whisper">
+Solo porque aprendió que amarte es la forma más hermosa que existe de vivir.
+</p>
+
+</div>
+
+<div style="margin:80px auto 35px;width:220px;height:2px;background:linear-gradient(90deg,transparent,#ffe8b6,#ffffff,#dcb8ff,transparent);"></div>
+
+<div style="text-align:center;">
+
+<div style="
+font-size:2.8rem;
+color:#ffe7bb;
+margin-bottom:10px;
+text-shadow:0 0 18px rgba(255,235,185,.55);">
+❦
+</div>
+
+<div style="
+font-family:'Montserrat',sans-serif;
+font-size:.88rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#efe2ff;">
+PARA EL AMOR MÁS HERMOSO DE MI UNIVERSO
+</div>
+
+<div style="
+margin-top:18px;
+font-size:1.45rem;
+font-style:italic;
+color:#fff8ef;">
+Con todo mi corazón,
+<br>
+<strong style="color:#ffe6b0;">
+para ti, mi niña hermosa.
+</strong>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+  </html>
